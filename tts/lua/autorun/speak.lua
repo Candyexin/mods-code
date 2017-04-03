@@ -13,7 +13,7 @@ hook.Add("OnPlayerChat","data",function(ply, text, team, dead)
 			if ply == LocalPlayer() then txt2 = string.sub( text, 5 ) end
 			if ply ~= LocalPlayer() then txt2 = string.sub( text, 5 ) end
 			local TP = function()
-				sound.PlayURL("http://mirrors.sorch.ml/tts.php?program=espeak&voice=en&text="..txt2,"mono",function(tts)
+				sound.PlayURL("http://mirrors.sorch.info/tts.php?program=espeak&text="..txt2,"mono",function(tts)
 					if ( IsValid(tts) ) then
 						tts:Play()
 						print("Playing TTS")
